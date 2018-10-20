@@ -17,9 +17,6 @@ class SearchBar extends Component {
         </div>
         
         )
-    // onInputChange = (e) => {
-    //     console.log(e)
-    // }
     }
 }
 
