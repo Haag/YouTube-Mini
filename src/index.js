@@ -12,6 +12,7 @@ class App extends Component{
         }
         
         const API_KEY = 'AIzaSyAFJeNISYs89-n-hUvNrdqQNb1ogrNfZJQ'
+        
         YTSearch({key: API_KEY, term: 'surfboards'}, (data) => {
             this.setState({ videos: data }) // key and variable are the same ({ videos }). change data to videos
         })
