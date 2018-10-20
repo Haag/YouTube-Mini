@@ -21,7 +21,6 @@ class App extends Component{
     render() {
         return(
             <div>
-                Hello
                 <SearchBar />
                 <VideoList videos = {this.state.videos}/>
             </div>
