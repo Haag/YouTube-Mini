@@ -10,13 +10,19 @@ class SearchBar extends Component {
     }
     render () {
         return (
-        <div className="search-bar">
-            <input 
-            placeholder = "Search"
-            value = {this.state.term}
-            onChange={ e => this.onInputChange(e.target.value)} />
-        </div>
-        
+            <div>
+                <div className="search-bar">
+                    <input 
+                    placeholder = "Search"
+                    value = {this.state.term}
+                    onChange={ e => this.onInputChange(e.target.value)} />
+                    <button className="searchbox">
+                        <div className="search-tooltip">
+                            Search
+                        </div>
+                    </button>
+                </div>
+            </div>
         )
     }
     onInputChange(term) {
@@ -24,7 +30,6 @@ class SearchBar extends Component {
         this.props.onSearchTermChange(term)
     }   
 }
-
 
 //Functional Component:
 // const SearchBar = () => {
