@@ -1,7 +1,11 @@
+.Title {
+    text-align: center;
+    padding-top: 20px;
+    color: #cc0101bb;
+}
 .search-bar {
     margin: 20px;
     text-align: center;
-    background: salmon;
 }
 
 .search-bar input {

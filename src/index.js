@@ -17,7 +17,7 @@ class App extends Component{
             videos: [],
             selectedVideo: null
         }
-        this.videoSearch('Navi Zelda')
+        this.videoSearch('It came upon the midnight clear')
     }
     videoSearch(term) {
         YTSearch({key: API_KEY, term: term}, (data) => {
@@ -33,7 +33,7 @@ class App extends Component{
         const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300 )
         return(
             <div>
-                <h1 align="center" >YouTube-Mini</h1>
+                <h1 className="Title" >YouTube-Mini</h1>
                 <SearchBar onSearchTermChange ={videoSearch}/>
                 <VideoList 
                 onVideoSelect = {selectedVideo => this.setState({selectedVideo})}
