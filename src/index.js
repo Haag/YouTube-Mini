@@ -1,3 +1,5 @@
+//ToDO -- Update suggestion videos based on selected video title
+
 import _ from 'lodash';
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
@@ -15,7 +17,7 @@ class App extends Component{
             videos: [],
             selectedVideo: null
         }
-        this.videoSearch('Navi')
+        this.videoSearch('Navi Zelda')
     }
     videoSearch(term) {
         YTSearch({key: API_KEY, term: term}, (data) => {
@@ -31,11 +33,12 @@ class App extends Component{
         const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300 )
         return(
             <div>
+                <h1 align="center" >YouTube-Mini</h1>
                 <SearchBar onSearchTermChange ={videoSearch}/>
-                <VideoDetail video ={this.state.selectedVideo}/>
                 <VideoList 
                 onVideoSelect = {selectedVideo => this.setState({selectedVideo})}
                 videos = {this.state.videos}/>
+                <VideoDetail video ={this.state.selectedVideo}/>
             </div>
         )
     }
